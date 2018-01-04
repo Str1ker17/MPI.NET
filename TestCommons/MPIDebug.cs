@@ -64,7 +64,7 @@ namespace MPI.TestCommons
                     throw new MPIDebugException(message + " - " + detailMessage);
         }
 
-        public static void Assert(bool condition, string message, string detailMessageFormat, params object[] args)
+        /*public static void Assert(bool condition, string message, string detailMessageFormat, params object[] args)
         {
             Success = Success && condition;
             if ((Behavior & MPIDebugOption.SysDiagnostic) == MPIDebugOption.SysDiagnostic)
@@ -72,7 +72,7 @@ namespace MPI.TestCommons
             if ((Behavior & MPIDebugOption.ThrowMPIDebugException) == MPIDebugOption.ThrowMPIDebugException)
                 if (!condition)
                     throw new MPIDebugException(message + " - " + String.Format(detailMessageFormat, args));
-        }
+        }*/
 
         public static int Execute(Action<string[]> doTest, string[] args)
         {
